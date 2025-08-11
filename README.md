@@ -11,6 +11,13 @@ This project implements a comprehensive face recognition system that includes:
 - Automated attendance tracking
 - Web-based interface using Flask
 
+## Requirements
+
+- **Python**: 3.6+ (Originally developed with Python 3.6/3.7)
+- **Operating System**: Windows, macOS, or Linux
+- **Hardware**: Webcam, GPU recommended for real-time processing
+- **Dependencies**: Listed in `requirements.txt`
+
 ## Features
 
 - **Face Recognition**: Accurate employee identification using trained facial models
@@ -45,18 +52,34 @@ face_recog_livliness/
 
 ## Installation
 
+### Prerequisites
+- Python 3.6 or higher (Python 3.7+ recommended)
+- pip package manager
+- Webcam or camera device
+
+### Setup Instructions
+
 1. **Clone the repository**:
    ```bash
    git clone https://github.com/AnwarXahid/face_recog_livliness.git
    cd face_recog_livliness
    ```
+2. **Create virtual environment** (recommended):
+   ```bash
+   # For Windows
+   python -m venv face_recog_env
+   face_recog_env\Scripts\activate
 
-2. **Install dependencies**:
+   # For macOS/Linux
+   python3 -m venv face_recog_env
+   source face_recog_env/bin/activate
+
+3. **Install dependencies**:
    ```bash
    pip install -r requirements.txt
    ```
 
-3. **Set up datasets**:
+4. **Set up datasets**:
    - Place employee photos in the `datasets/` directory
    - Organize photos by employee ID or name
    - Ensure good quality, well-lit photos for better recognition
@@ -172,4 +195,14 @@ For production deployment:
    - GPU recommended for real-time processing
 
 2. **Server Deployment**:
-   - Deploy Flask application on production s
+   - Deploy Flask application on production server
+   - Configure proper database for attendance records
+   - Set up automated backup systems
+
+## Troubleshooting
+
+### Common Issues:
+- **Camera not detected**: Check camera permissions and connections
+- **Poor recognition**: Improve lighting conditions or retrain models
+- **False spoofing alerts**: Adjust liveness detection sensitivity
+- **Performance issues**: Consider hardware upgrades or model optimization
